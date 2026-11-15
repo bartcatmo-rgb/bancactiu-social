@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: path.join(__dirname, "../../"),
   transpilePackages: ["@bancactiu/db", "@bancactiu/ui-glass", "@bancactiu/interoperability-connector"],
   async headers() {
     return [

@@ -21,7 +21,8 @@ import {
   GlassHeader,
   GlassModal,
   GatewayLauncher,
-  AppDefinition
+  AppDefinition,
+  resolveAppTargetUrl
 } from '@bancactiu/ui-glass';
 import { BancActiuSocialWorkspace } from '../components/workspaces/BancActiuSocialWorkspace';
 
@@ -40,7 +41,7 @@ export default function BancActiuSocialPage() {
       setIsLauncherOpen(false);
       return;
     }
-    window.location.href = `http://localhost:${app.port}`;
+    window.location.href = resolveAppTargetUrl(app);
   };
 
   return (
